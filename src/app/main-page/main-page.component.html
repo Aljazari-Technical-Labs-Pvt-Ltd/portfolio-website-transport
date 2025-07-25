@@ -1,0 +1,194 @@
+<!-- main-page.component.html -->
+<div class="video-container">
+  <video #backgroundVideo autoplay muted loop playsinline>
+    <source src="assets/main-page.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<div class="text-overlay">
+  <app-navbar></app-navbar>
+  
+  <div class="hero-content">
+    <h1>Your Trusted Partner in Transportation Excellence</h1>
+    <p class="tagline">Experience seamless journeys with our premium fleet, professional drivers, and commitment to safety across every mile.</p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-number">50K+</span>
+        <span class="stat-label">Happy Passengers</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">500+</span>
+        <span class="stat-label">Routes Covered</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">99.9%</span>
+        <span class="stat-label">Safety Record</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Services Section -->
+<div class="content">
+  <div class="services-section">
+    <div class="services-container">
+      <h2 class="services-title">Premium Transportation Solutions</h2>
+      <p class="services-subtitle">Tailored services designed to meet your unique travel requirements</p>
+      
+      <div class="services-row" #servicesRow>
+        <!-- School Bus Service -->
+        <div class="service-card school-service">
+          <div class="service-image">
+            <img src="assets/school_bus.jpg" alt="School Bus Service">
+            <div class="service-badge">Most Popular</div>
+          </div>
+          <div class="service-info">
+            <h3>Premium School Transport</h3>
+            <p>Comprehensive student transportation with advanced safety protocols, real-time GPS monitoring, and certified drivers trained in child safety standards.</p>
+            <div class="service-features">
+              <span class="feature-tag">GPS Tracking</span>
+              <span class="feature-tag">Safety Certified</span>
+              <span class="feature-tag">Parent Updates</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Passenger Bus Service -->
+        <div class="service-card passenger-service">
+          <div class="service-image">
+            <img src="assets/passenger_bus.jpg" alt="Passenger Bus Service">
+            <div class="service-badge new-badge">Premium Fleet</div>
+          </div>
+          <div class="service-info">
+            <h3>Executive Passenger Service</h3>
+            <p>Luxury intercity and intracity travel featuring modern air-conditioned buses, reclining seats, and professional hospitality for maximum comfort.</p>
+            <div class="service-features">
+              <span class="feature-tag">AC Comfort</span>
+              <span class="feature-tag">WiFi Enabled</span>
+              <span class="feature-tag">Entertainment</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Corporate Shuttle Service -->
+        <div class="service-card corporate-service">
+          <div class="service-image">
+            <img src="assets/corporate_bus.jpg" alt="Corporate Shuttle Service">
+            <div class="service-badge corporate-badge">Business Class</div>
+          </div>
+          <div class="service-info">
+            <h3>Corporate Shuttle Solutions</h3>
+            <p>Dedicated employee transportation services with flexible scheduling, route optimization, and professional management for corporate clients.</p>
+            <div class="service-features">
+              <span class="feature-tag">Custom Routes</span>
+              <span class="feature-tag">Flexible Timing</span>
+              <span class="feature-tag">Corporate Rates</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- What We Offer Section -->
+  <div class="offer-section">
+    <div class="offer-container">
+      <h2 class="offer-title">Why Choose Lynx Transit Excellence</h2>
+      <p class="offer-subtitle">Unmatched service quality backed by industry-leading standards</p>
+      
+      <div class="offer-list" #offerList>
+        <div class="offer-item" #offerItem1>
+          <div class="tick-icon">🚌</div>
+          <div class="offer-text">
+            <h4>24/7 Premium Customer Support</h4>
+            <p>Dedicated support team available round-the-clock with multilingual assistance, instant booking confirmations, and real-time journey updates via our mobile app.</p>
+          </div>
+        </div>
+        
+        <div class="offer-item" #offerItem2>
+          <div class="tick-icon">📍</div>
+          <div class="offer-text">
+            <h4>Advanced GPS Tracking & Safety Systems</h4>
+            <p>State-of-the-art vehicle monitoring with live location sharing, emergency response protocols, driver behavior monitoring, and comprehensive insurance coverage.</p>
+          </div>
+        </div>
+        
+        <div class="offer-item" #offerItem3>
+          <div class="tick-icon">💺</div>
+          <div class="offer-text">
+            <h4>Luxury Comfort & Premium Amenities</h4>
+            <p>Ergonomic seating with extra legroom, climate control, USB charging ports, onboard entertainment systems, and complimentary refreshments on select routes.</p>
+          </div>
+        </div>
+        
+        <div class="offer-item" #offerItem4>
+          <div class="tick-icon">👨‍✈️</div>
+          <div class="offer-text">
+            <h4>Certified Professional Drivers</h4>
+            <p>Rigorously trained and background-verified drivers with commercial licenses, defensive driving certification, and regular performance evaluations for your safety.</p>
+          </div>
+        </div>
+        
+        <div class="offer-item" #offerItem5>
+          <div class="tick-icon">💰</div>
+          <div class="offer-text">
+            <h4>Transparent & Competitive Pricing</h4>
+            <p>Market-leading rates with no hidden charges, flexible payment options, group discounts, loyalty rewards program, and easy online booking with instant confirmations.</p>
+          </div>
+        </div>
+
+        <div class="offer-item" #offerItem6>
+          <div class="tick-icon">🌱</div>
+          <div class="offer-text">
+            <h4>Eco-Friendly Transportation</h4>
+            <p>Modern fuel-efficient fleet with reduced emissions, contributing to environmental sustainability while maintaining superior performance and reliability standards.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <div class="testimonials-section">
+    <div class="testimonials-container">
+      <h2 class="testimonials-title">What Our Customers Say</h2>
+      <p class="testimonials-subtitle">Real experiences from satisfied passengers</p>
+      
+      <div class="testimonials-grid" #testimonialsGrid>
+        <div class="testimonial-card" #testimonial1>
+          <div class="testimonial-content">
+            <div class="stars">★★★★★</div>
+            <p>"Lynx Transit has transformed our daily commute. The buses are always on time, clean, and the drivers are courteous. Highly recommended!"</p>
+            <div class="testimonial-author">
+              <strong>Sarah Ahmed</strong>
+              <span>Regular Passenger</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" #testimonial2>
+          <div class="testimonial-content">
+            <div class="stars">★★★★★</div>
+            <p>"As a parent, safety is my top priority. The GPS tracking and professional drivers give me complete peace of mind for my children's school transport."</p>
+            <div class="testimonial-author">
+              <strong>Mohammad Khan</strong>
+              <span>Parent</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" #testimonial3>
+          <div class="testimonial-content">
+            <div class="stars">★★★★★</div>
+            <p>"Excellent corporate shuttle service! The flexible scheduling and reliable service has significantly improved our employee satisfaction."</p>
+            <div class="testimonial-author">
+              <strong>Fatima Shah</strong>
+              <span>HR Manager</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,116 @@
+<!-- booking.component.html -->
+<div class="header" #header>
+  <app-navbar></app-navbar>
+</div>
+
+<div class="booking-page">
+  <div class="booking-container scroll-reveal">
+    <div class="booking-header">
+      <h1 class="form-heading">🎫 Reserve Your Journey</h1>
+      <p class="booking-subtitle">Experience premium comfort with Lynx Transit - Your journey begins here</p>
+    </div>
+
+    <div class="form-wrapper">
+      <form class="booking-form" (ngSubmit)="submitForm()" #form="ngForm">
+        <div class="form-row">
+          <div class="input-group scroll-reveal">
+            <label class="input-label">
+              <span class="label-text">👤 Full Name</span>
+              <input 
+                type="text" 
+                name="name" 
+                [(ngModel)]="booking.name" 
+                required
+                class="form-input"
+                placeholder="Enter your full name">
+              <div class="input-border"></div>
+            </label>
+          </div>
+
+          <div class="input-group scroll-reveal">
+            <label class="input-label">
+              <span class="label-text">⚧ Gender</span>
+              <select name="gender" [(ngModel)]="booking.gender" required class="form-select">
+                <option value="" disabled selected>Select your gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+              <div class="input-border"></div>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="input-group scroll-reveal">
+            <label class="input-label">
+              <span class="label-text">🎂 Age</span>              
+              <input 
+                type="number" 
+                name="age" 
+                [(ngModel)]="booking.age" 
+                required 
+                min="1" 
+                max="120"
+                class="form-input"
+                placeholder="Your age">
+              <div class="input-border"></div>
+            </label>
+            
+          </div>
+
+          <div class="input-group scroll-reveal">
+            <label class="input-label">
+              <span class="label-text">🆔 ID Card Number</span>
+              <input 
+                type="text" 
+                name="idCard" 
+                [(ngModel)]="booking.idCard" 
+                required 
+                pattern="[0-9]{13}"
+                class="form-input"
+                placeholder="13-digit ID number">
+              <div class="input-border"></div>
+            </label>
+          </div>
+        </div>
+
+        <div class="special-seat-section scroll-reveal">
+          <div class="checkbox-wrapper">
+            <label class="checkbox-label">
+              <input 
+                type="checkbox" 
+                name="specialSeat" 
+                [(ngModel)]="booking.specialSeat"
+                class="checkbox-input">
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-text">♿ I require special accessibility seating</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-actions scroll-reveal">
+          <button 
+            type="submit" 
+            [disabled]="!form.valid"
+            class="submit-button">
+            <span class="button-text">🚌 Confirm Booking</span>
+            <div class="button-ripple"></div>
+          </button>
+        </div>
+
+        <div class="booking-info scroll-reveal">
+          <div class="info-card">
+            <h3>📋 Booking Information</h3>
+            <ul>
+              <li>✓ Instant confirmation via SMS/Email</li>
+              <li>✓ Free cancellation up to 2 hours before departure</li>
+              <li>✓ GPS tracking and live updates</li>
+              <li>✓ 24/7 customer support</li>
+            </ul>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
